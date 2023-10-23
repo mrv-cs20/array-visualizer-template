@@ -47,9 +47,8 @@ function option2() {
 // Function to draw current state of grades array
 function drawArray(array, maxVal) {
   let outputStr = "";
-  let divHeight;
   for (let i = 0; i < array.length; i++) {
-    divHeight = (array[i] / maxVal) * 600; // Scale grades to fit in array visualizer container
+    let divHeight = (array[i] / maxVal) * 600; // Scale grades to fit in array visualizer container
     outputStr += `<div style="height:${divHeight}px"></div>`;
   }
   document.getElementById("container").innerHTML = outputStr;
